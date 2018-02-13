@@ -25,9 +25,9 @@ timedatectl status
 ```
 
 Erase disk and create 3 new partitions.
-- **sd _x_ 1** EFI partition (about 260-512 MB, code `ef00`)
-- **sd _x_ 2** swap partition (more than 512 MB, code `8200`)
-- **sd _x_ 3** root partition (code `8304`)
+- **sd_x_1** EFI partition (about 260-512 MB, code `ef00`)
+- **sd_x_2** swap partition (more than 512 MB, code `8200`)
+- **sd_x_3** root partition (code `8304`)
 ```
 cgdisk /dev/sdx
 ```
