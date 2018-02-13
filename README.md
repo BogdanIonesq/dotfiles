@@ -37,7 +37,7 @@ Format the boot partition:
 mkfs.fat -F32 /dev/sdx1
 ```
 
-Activate the swap partiton:
+Activate the swap partition:
 ``` sh
 mkswap /dev/sdx2
 swapon /dev/sdx2
