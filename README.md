@@ -1,8 +1,6 @@
 # Arch Linux dotfiles and setup
 
 ## Current Setup
-![alt text](https://github.com/BogdanIonesq/dotfiles/blob/master/clean.png)
-
 ![alt text](https://github.com/BogdanIonesq/dotfiles/blob/master/busy.png)
 
 ## Installing Arch on a new machine

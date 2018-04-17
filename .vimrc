@@ -8,7 +8,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'raimondi/delimitmate'
+Plugin 'yggdroot/indentline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,5 +41,13 @@ augroup END
 " Autostart NERDTree and close vim if only NERDTree is open
 autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Highlight cursor line
+set cursorline
+
+" exit YCM preview window
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 
 
