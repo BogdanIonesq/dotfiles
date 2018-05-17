@@ -25,3 +25,5 @@ alias light-90="echo 954 | sudo tee /sys/class/backlight/intel_backlight/brightn
 alias light-100="echo 1060 | sudo tee /sys/class/backlight/intel_backlight/brightness"
 
 # ----
+
+stty -ixon

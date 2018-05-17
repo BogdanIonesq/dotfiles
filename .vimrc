@@ -11,7 +11,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'raimondi/delimitmate'
-Plugin 'yggdroot/indentline'
+Plugin 'dracula/vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,13 +21,15 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-"Colorscheme
-colorscheme gruvbox
-set background=dark    " Setting dark mode
-let g:gruvbox_contrast_dark = 'medium'
-
 " Syntax highlighting
 syntax on
+
+" Setting dark mode
+set background=dark   
+
+"Colorscheme
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'soft'
 
 " Line numbers
 set number
@@ -48,6 +50,8 @@ set cursorline
 " exit YCM preview window
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+set splitbelow
 
 
 
