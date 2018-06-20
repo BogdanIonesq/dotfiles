@@ -3,6 +3,8 @@
 ## Current Setup
 ![alt text](https://github.com/BogdanIonesq/dotfiles/blob/master/busy.png)
 
+![alt text](https://github.com/BogdanIonesq/dotfiles/blob/master/urxvt+rofi.png)
+
 ## Installing Arch on a new machine
 **DISCLAIMER: These guidelines were written specifically for my machine and _might_ not work on yours. Always follow [the official Installation guide](https://wiki.archlinux.org/index.php/Installation_guide).**
 

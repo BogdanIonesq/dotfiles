@@ -66,7 +66,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-# bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
@@ -160,7 +160,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym $mod+l exec --no-startup-id i3lock --image=/home/bogdan/Pictures/Wallpapers/Normal/alpsp.png
 
 # wallpapers
-exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/Heart_Points.png
+exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/cityp.png
 #exec_always --no-startup-id feh --randomize --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/*
 
 # cycle through workspaces
@@ -170,15 +170,36 @@ bindsym $mod+Tab workspace next
 exec --no-startup-id redshift
 
 # window rules
-assign [class="Google-chrome"] 1
+assign [class="Google-chrome"] workspace 1
 for_window [class="Google-chrome"] focus
-assign [class="Codeblocks"] 2
+assign [class="Codeblocks"] workspace 2
 for_window [class="Codeblocks"] focus
-assign [class="Atom"] 3
+assign [class="Atom"] workspace 3
 for_window [class="Atom"] focus
 
 # colours
-client.focused #d65d0e #d65d0e #d65d0e #076678 #d65d0e
+# class                 border  backgr. text    indicator child_border
+client.focused          #ff5555 #ff5555 #ffffff #bd93f9   #ff5555
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #44475a #44475a #888888 #292d2e   #44475a
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 # compton
 exec --no-startup-id compton --config ~/.config/compton.conf -CGb
+
+# extra monitor
+workspace 1 output eDP-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
+workspace 4 output eDP-1
+workspace 5 output HDMI-1
+workspace 6 output eDP-1
+workspace 7 output eDP-1
+workspace 8 output eDP-1
+workspace 9 output eDP-1
+workspace 10 output eDP-1
+
+focus_follows_mouse no

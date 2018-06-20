@@ -21,15 +21,17 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
+" 256 colors
+set t_Co=256
+
 " Syntax highlighting
 syntax on
 
 " Setting dark mode
-set background=dark   
+set background=dark
 
-"Colorscheme
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'soft'
+" Colorscheme
+color dracula
 
 " Line numbers
 set number
@@ -52,6 +54,3 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 set splitbelow
-
-
-
