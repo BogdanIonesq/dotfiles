@@ -30,7 +30,7 @@ font pango:Ubuntu Mono 15
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
@@ -149,7 +149,7 @@ smart_gaps on
 gaps inner 30
 # gaps outer 20
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # smart borders
 smart_borders on
@@ -157,38 +157,40 @@ smart_borders on
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $mod+l exec --no-startup-id i3lock --image=/home/bogdan/Pictures/Wallpapers/Normal/alpsp.png
+bindsym $mod+l exec --no-startup-id i3lock --image=/home/bogdan/Pictures/Wallpapers/Normal/rose.png
 
 # wallpapers
-exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/cityp.png
+exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/forestp.png
 #exec_always --no-startup-id feh --randomize --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/*
 
 # cycle through workspaces
 bindsym $mod+Tab workspace next
 
 # redshift
-exec --no-startup-id redshift
+exec --no-startup-id redshift -l 44.43:26.10
 
 # window rules
 assign [class="Google-chrome"] workspace 1
 for_window [class="Google-chrome"] focus
+
 assign [class="Codeblocks"] workspace 2
 for_window [class="Codeblocks"] focus
-assign [class="Atom"] workspace 3
-for_window [class="Atom"] focus
+
+assign [class="Code"] workspace 2
+for_window [class="Code"] focus
 
 # colours
 # class                 border  backgr. text    indicator child_border
-client.focused          #ff5555 #ff5555 #ffffff #bd93f9   #ff5555
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #44475a #44475a #888888 #292d2e   #44475a
+client.focused          #4c7899 #285577 #ffffff #BF616A   #5E81AC
+client.focused_inactive #2E3440 #2E3440 #ffffff #2E3440   #2E3440
+client.unfocused        #2E3440 #2E3440 #2E3440 #2E3440   #2E3440
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
 # compton
-exec --no-startup-id compton --config ~/.config/compton.conf -CGb
+# exec --no-startup-id compton --config ~/.config/compton.conf -CGb
 
 # extra monitor
 workspace 1 output eDP-1
