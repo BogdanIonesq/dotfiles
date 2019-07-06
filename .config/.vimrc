@@ -1,74 +1,28 @@
-" Vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"### vim-plug
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'scrooloose/nerdtree'
-Plugin 'itchyny/lightline.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'raimondi/delimitmate'
-Plugin 'dracula/vim'
-Plugin 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" Initialize plugin system
+call plug#end()
 
-" Syntax highlighting
-syntax on
-
-set termguicolors
-
-" Setting dark mode
+"### colorscheme
 set background=dark
+set termguicolors
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
-" Colorscheme
-
-" gruvbox
-" let g:gruvbox_contrast_dark = 'hard'
-" colorscheme gruvbox
-
-" nord
-colorscheme nord
-
-" Line numbers
-set number
-
-" Save cursor
-augroup resCur
-  autocmd!
-  autocmd BufReadPost * call setpos(".", getpos("'\""))
-augroup END
-
-" Autostart NERDTree and close vim if only NERDTree is open
+"### nerdtree
+let g:NERDTreeMinimalUI = v:true
+map <C-n> :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-" Arrow symbols in nerdtree
-
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-
-" Highlight cursor line
-set cursorline
-
-" exit YCM preview window
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-
-set splitbelow
-
-let g:lightline = {
-  \ 'colorscheme': 'nord'
-\}
-
-let NERDTreeMinimalUI=1

@@ -30,7 +30,7 @@ font pango:Ubuntu Mono 15
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+q kill
@@ -149,7 +149,7 @@ smart_gaps on
 gaps inner 30
 # gaps outer 20
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # smart borders
 smart_borders on
@@ -160,7 +160,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym $mod+l exec --no-startup-id i3lock --image=/home/bogdan/Pictures/Wallpapers/Normal/rose.png
 
 # wallpapers
-exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/forestp.png
+exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/road.jpg
 #exec_always --no-startup-id feh --randomize --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/*
 
 # cycle through workspaces
@@ -179,11 +179,20 @@ for_window [class="Codeblocks"] focus
 assign [class="Code"] workspace 2
 for_window [class="Code"] focus
 
+assign [class="Deluge"] workspace 3
+for_window [class="Deluge"] focus
+
+assign [class="jetbrains-clion"] workspace 2
+for_window [class="jetbrains-clion"] focus
+
+assign [class="jetbrains-goland"] workspace 2
+for_window [class="jetbrains-goland"] focus
+
 # colours
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #BF616A   #5E81AC
-client.focused_inactive #2E3440 #2E3440 #ffffff #2E3440   #2E3440
-client.unfocused        #2E3440 #2E3440 #2E3440 #2E3440   #2E3440
+client.focused          #d65d0e #285577 #ffffff #fb4934   #458588
+client.focused_inactive #3c3836 #3c3836 #ffffff #3c3836   #3c3836
+client.unfocused        #3c3836 #3c3836 #3c3836 #3c3836   #3c3836
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
