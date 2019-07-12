@@ -15,7 +15,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # PS1='┌─[\w]\n└╼ '
 #PS1="┌─[\[\e[31m\]\w\[\e[m\]]\n└─╼ "
-PS1="[\[\e[32m\]\w\[\e[0m\]] \e[91mλ\e[0m "
+PS1="[\[\e[32m\]\w\[\e[0m\]]\[\e[91m\] λ\[\e[0m\] "
 
 # ----
 # Aliases
