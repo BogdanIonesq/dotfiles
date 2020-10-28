@@ -7,15 +7,15 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias monitor-on='xrandr --output HDMI-1 --primary --mode 3840x2160 --pos 0x0 --rotate normal --output DP-1 --off --output eDP-1 --mode 2560x1440 --pos 584x2160 --rotate normal --output DP-2 --off'
+alias monitor-on='xrandr --output eDP-1 --primary --mode 2560x1440 --pos 640x2160 --rotate normal --output DP-1 --off --output HDMI-1 --mode 3840x2160 --pos 0x0 --rotate normal --output DP-2 --off'
 alias monitor-off='xrandr --output eDP-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off'
 
-export GOPATH="$HOME/go/"
+export GOPATH="$HOME/.go"
 export PATH=$PATH:$GOPATH/bin
 
 # PS1='┌─[\w]\n└╼ '
 #PS1="┌─[\[\e[31m\]\w\[\e[m\]]\n└─╼ "
-PS1="[\[\e[32m\]\w\[\e[0m\]]\[\e[91m\] λ\[\e[0m\] "
+PS1="[\[\e[36m\]\w\[\e[0m\]]\[\e[91m\] λ\[\e[0m\] "
 
 # ----
 # Aliases

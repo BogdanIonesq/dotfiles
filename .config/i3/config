@@ -36,7 +36,7 @@ bindsym $mod+Return exec --no-startup-id xterm
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run -font "Office Code Pro 24"
+bindsym $mod+d exec rofi -show run
 
 
 # alternatively, you can use the cursor keys:
@@ -157,10 +157,10 @@ smart_borders on
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $mod+l exec --no-startup-id i3lock --image=/home/bogdan/Pictures/Wallpapers/Normal/rose.png
+bindsym $mod+l exec --no-startup-id i3lock --image=/home/bogdan/Pictures/Wallpapers/Normal/cell.png
 
 # wallpapers
-exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/road.jpg
+exec_always --no-startup-id feh --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/mountains.png
 #exec_always --no-startup-id feh --randomize --bg-scale /home/bogdan/Pictures/Wallpapers/Normal/*
 
 # cycle through workspaces
@@ -172,9 +172,6 @@ exec --no-startup-id redshift -l 44.43:26.10
 # window rules
 assign [class="Google-chrome"] workspace 1
 for_window [class="Google-chrome"] focus
-
-assign [class="Codeblocks"] workspace 2
-for_window [class="Codeblocks"] focus
 
 assign [class="Code"] workspace 2
 for_window [class="Code"] focus
@@ -190,13 +187,13 @@ for_window [class="jetbrains-goland"] focus
 
 # colours
 # class                 border  backgr. text    indicator child_border
-client.focused          #d65d0e #285577 #ffffff #fb4934   #458588
-client.focused_inactive #3c3836 #3c3836 #ffffff #3c3836   #3c3836
-client.unfocused        #3c3836 #3c3836 #3c3836 #3c3836   #3c3836
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #282a36 #282a36 #282a36 #ffb86c   #8be9fd
+client.focused_inactive #282a36 #282a36 #282a36 #282a36   #282a36
+client.unfocused        #282a36 #282a36 #282a36 #282a36   #282a36
+client.urgent           #282a36 #282a36 #282a36 #282a36   #282a36
+client.placeholder      #282a36 #282a36 #282a36 #282a36   #282a36
 
-client.background       #ffffff
+client.background       #282a36
 
 # compton
 # exec --no-startup-id compton --config ~/.config/compton.conf -CGb
@@ -214,3 +211,4 @@ workspace 9 output eDP-1
 workspace 10 output eDP-1
 
 focus_follows_mouse no
+
